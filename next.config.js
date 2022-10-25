@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  basePath: "/Test-deep",
-  assetPrefix: "/Test-deep", 
+  basePath: "/Testing-deep",
+  assetPrefix: "/Testing-deep", 
 }
 
 module.exports = nextConfig
