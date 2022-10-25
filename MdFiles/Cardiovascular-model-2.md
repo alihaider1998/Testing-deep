@@ -4,7 +4,7 @@ category: 'CardioVascular'
 desc: 'Some description of CardioVascular Model 2.'
 thumbnail: https://st.depositphotos.com/1000423/3062/i/600/depositphotos_30620391-stock-photo-human-heart-beats.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
-show: false
+show: true
 ---
 
 # Cardiovascular Model 2
