@@ -68,6 +68,10 @@ export default function CategoryPage({ filesData, category }) {
     const router = useRouter();
     return (
         <SearchContext.Provider value={{ value, setValue }}>
+                        <div>                   
+                 <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.category}</h1>
+            </div>
+
             <div className="mb-12  text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
                     Choose Your Desired Model
