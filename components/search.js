@@ -5,9 +5,10 @@ import React, { useRef, useEffect } from "react";
 export default function SearchAndFilter() {
     const inputElement = useRef(null);
     useEffect(() => {
-        if (inputElement.current) {
-            inputElement.current.focus();
-        }
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+            if (inputElement.current) {
+                inputElement.current.focus();
+            }          }
     }, []);
 
 
