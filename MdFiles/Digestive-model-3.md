@@ -1,8 +1,8 @@
 ---
 title: 'Digestive Model 3'
 category: 'Digestive'
-subcategory: 'Sub Digestive'
-subsubcategory: 'Subsub Dig'
+subcategory: 'Sub3 Digestive'
+subsubcategory: 'Subsub3 Dig'
 desc: 'Some description of Digestive Model 3.'
 thumbnail: https://st2.depositphotos.com/3413075/5652/i/600/depositphotos_56525777-stock-photo-digestive-system.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

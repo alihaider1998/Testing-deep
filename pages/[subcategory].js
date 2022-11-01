@@ -67,6 +67,7 @@ export async function getStaticProps({ params: { subcategory } }) {
 
 export default function CategoryPage({ filesData, subcategory }) {
     const [value, setValue] = useState('');
+    console.log(value)
     const router = useRouter();
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
@@ -89,7 +90,7 @@ export default function CategoryPage({ filesData, subcategory }) {
 
             <div className="mb-12  text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                    Choose Your Desired Model
+                    Choose Your Desired Option
                 </h2></div>
                 <SearchAndFilter />
 
@@ -98,7 +99,7 @@ export default function CategoryPage({ filesData, subcategory }) {
             {/* Start Conditional Rendering of Subcategories heading */}
             {unique.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.category == subcategory)
-                .map(props => {
+                .filter(item => searchTitle(item, value)).map(props => {
                     if (props.frontmatter.subcategory) {
                         subcategoryExists = true
                     }
@@ -115,7 +116,6 @@ export default function CategoryPage({ filesData, subcategory }) {
                     .filter(props => props.frontmatter.category == subcategory)
                     .filter(item => searchTitle(item, value)).map(props => {
                         if (props.frontmatter.subcategory) {
-
                             return (
                                 <Card
                                     key={props.slug}
@@ -133,13 +133,14 @@ export default function CategoryPage({ filesData, subcategory }) {
              {/* Start Conditional Rendering of models heading in Subcategories */}
              {filesData.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.category == subcategory)
-                .map(props => {
+                .filter(item => searchTitle(item, value)).map(props => {
                     if (!props.frontmatter.subcategory) {
                         subcategoryModelsExists = true
                     }
                 })}
-            {subcategoryModelsExists ?  <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3 mt-3 text-4xl">
+            {subcategoryModelsExists ? 
+             <div className="text-center">
+                <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
                     Models of {useRouter().query.subcategory}
                 </h1>
             </div>: false}

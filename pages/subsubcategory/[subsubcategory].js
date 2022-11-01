@@ -98,7 +98,7 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
             {/* Start Conditional Rendering of Subcategories heading */}
             {unique.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.subcategory == subsubcategory)
-                .map(props => {
+                .filter(item => searchTitle(item, value)).map(props => {
                     if (props.frontmatter.subsubcategory) {
                         subsubcategoryExists = true
                     }
@@ -136,7 +136,7 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
             {/* Start Conditional Rendering of models heading in Subcategories */}
              {filesData.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.subcategory == subsubcategory)
-                .map(props => {
+                .filter(item => searchTitle(item, value)).map(props => {
                     if (!props.frontmatter.subsubcategory) {
                         subsubcategoryModelsExists = true
                     }

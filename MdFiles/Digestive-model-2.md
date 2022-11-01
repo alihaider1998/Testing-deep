@@ -1,8 +1,8 @@
 ---
 title: 'Digestive Model 2'
 category: 'Digestive'
-subcategory: 'Sub Digestive'
-subsubcategory: 'Subsub Dig'
+subcategory: 'Sub2 Digestive'
+subsubcategory: 'Subsub2 Dig'
 desc: 'Some description of Digestive Model 2.'
 thumbnail: https://st2.depositphotos.com/6563466/43208/i/600/depositphotos_432084164-stock-photo-human-digestive-system-anatomy.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
