@@ -3,7 +3,6 @@ title: 'Urinary Model 1'
 category: 'Urinary'
 subcategory: 'SubUrinary'
 subsubcategory: 'SubSubUrinary'
-subsubsubcategory: 'SubsubsubUrinary'
 desc: 'Some words about Urinary Model 1.'
 thumbnail: https://st3.depositphotos.com/6563466/32510/i/600/depositphotos_325109980-stock-photo-human-urinary-system-kidneys-bladder.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

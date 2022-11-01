@@ -135,7 +135,6 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
             {filesData.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.subsubcategory == subsubsubcategory)
                 .map(props => {
-                    console.log(props)
                     if (!props.frontmatter.subsubsubcategory) {
                         subsubsubcategoryModelsExists = true
                     }
