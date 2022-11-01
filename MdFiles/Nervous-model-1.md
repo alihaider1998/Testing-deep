@@ -2,7 +2,7 @@
 title: 'Nervous Model 1'
 category: 'Nervous'
 subcategory: 'Sub Nervous'
-subsubcategory: 'Subsub Nerv'
+# subsubcategory: 'Subsub Nerv'
 subsubsubcategory: 'Subsubsub Nerv'
 desc: 'Some words about Nervous Model 1.'
 thumbnail: https://st2.depositphotos.com/4208247/6559/i/600/depositphotos_65591807-stock-photo-nervous-system.jpg

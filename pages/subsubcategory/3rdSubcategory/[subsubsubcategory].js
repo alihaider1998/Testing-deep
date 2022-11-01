@@ -130,6 +130,43 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
                         }
                     })}
             </div>
+
+            {/* Start Conditional Rendering of models heading in Subcategories */}
+            {filesData.filter(item => item.frontmatter.show == true)
+                .filter(props => props.frontmatter.subsubcategory == subsubsubcategory)
+                .map(props => {
+                    console.log(props)
+                    if (!props.frontmatter.subsubsubcategory) {
+                        subsubsubcategoryModelsExists = true
+                    }
+                })}
+            {subsubsubcategoryModelsExists ?  <div className="text-center">
+                <h1 className=" font-semibold text-center mb-3 mt-3 text-4xl">
+                    Models of {useRouter().query.subsubsubcategory}
+
+                </h1>
+            </div>: false}
+            {/* Ending Conditional Rendering of models heading in Subcategories */}
+           
+            <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
+                {filesData.filter(item => item.frontmatter.show == true)
+                    .filter(props => props.frontmatter.subsubcategory == subsubsubcategory)
+                    .filter(item => searchTitle(item, value)).map(props => {
+                        if (!props.frontmatter.subsubsubcategory) {
+                            return (
+                                <ModelCard
+                                    key={props.slug}
+                                    slug={props.slug}
+                                    title={props.frontmatter.title}
+                                    category={props.frontmatter.category}
+                                    subcategory={props.frontmatter.subcategory}
+                                    thumbnail={props.frontmatter.thumbnail}
+                                    desc={props.frontmatter.desc}
+                                />
+                            )
+                        }
+                    })}
+            </div>
         </SearchContext.Provider>
     )
 }

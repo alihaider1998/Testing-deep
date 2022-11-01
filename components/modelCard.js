@@ -81,7 +81,7 @@ export default function ModelCard(props) {
                         </>
                         :
                         false}
-                    {/* {router.pathname == `/subsubcategory/3rdSubcategory/[subsubsubcategory]` ?
+                    {router.pathname == `/subsubcategory/3rdSubcategory/[subsubsubcategory]` ?
                         <>
                             <div className="relative overflow-hidden">
                                 <img
@@ -90,12 +90,20 @@ export default function ModelCard(props) {
                                     className="min-h-5/6 ml-6 object-fill  aspect-square rounded-full w-5/6"
                                 />
                             </div>
-                            <h1 className="mt-1 px-4 py-1 -my-1 text-2xl font-medium leading-tight">
-                                {props.subsubsubcategory}
-                            </h1>
+                            <div className="text-center">
+                                <h1 className="mt-1 px-4 py-1 -my-1 text-2xl font-medium leading-tight">
+                                    {props.title}
+                                </h1>
+                            </div>
+                            <div className="pt-1 mb-2 text-center  line-clamp-2">
+                                Category: {props.category}
+                            </div>
+                            <div className="pt-1 mb-2 -mt-3 text-center text-slate-600 ">
+                                {props.desc}
+                            </div>
                         </>
                         :
-                        false} */}
+                        false}
                 </div>
             </Link>
 
