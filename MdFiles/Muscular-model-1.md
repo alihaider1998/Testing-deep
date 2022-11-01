@@ -1,6 +1,9 @@
 ---
 title: 'Muscular Model 1'
 category: 'Muscular'
+subcategory: 'Sub Muscular'
+subsubcategory: 'Subsub Musc'
+subsubsubcategory: 'Subsubsub Musc'
 desc: 'Some words about Muscular Model 1.'
 thumbnail: https://st.depositphotos.com/1162342/1400/i/600/depositphotos_14002553-stock-photo-male-musculoskeletal-system.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

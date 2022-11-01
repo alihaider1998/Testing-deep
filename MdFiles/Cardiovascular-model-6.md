@@ -1,18 +1,18 @@
 ---
-title: 'Respiratory Model 1'
-category: 'Respiratory'
-subcategory: 'Sub Respiratory'
-subsubcategory: 'Subsub Resp'
-subsubsubcategory: 'Subsubsub Resp'
-desc: 'Some words about Respiratory Model 1.'
-thumbnail: https://st2.depositphotos.com/3228285/6012/i/600/depositphotos_60123897-stock-photo-clean-and-healthy-lungs.jpg
+title: 'CardioVascular Model 6'
+category: 'CardioVascular'
+subcategory: 'Sub CardioVascular'
+# subsubcategory: 'Subsub CardioVascular'
+subsubsubcategory: 'Subsubsub CardioVascular'
+desc: 'Some description of CardioVascular Model 6.'
+thumbnail: https://cdn.pixabay.com/photo/2020/04/22/19/29/heart-5079717__480.png
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
 
-# Respiratory Model 1
+# Cardiovascular Model 6
 Generate deepsynth-gitract images.  
-![](https://st2.depositphotos.com/3228285/6012/i/600/depositphotos_60123897-stock-photo-clean-and-healthy-lungs.jpg)
+![](https://cdn.pixabay.com/photo/2020/04/22/19/29/heart-5079717__480.png)
 
 ## Installation
 

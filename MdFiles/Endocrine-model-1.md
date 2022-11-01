@@ -1,6 +1,9 @@
 ---
 title: 'Endocrine Model 1'
 category: 'Endocrine'
+subcategory: 'Sub Endocrine'
+subsubcategory: 'Subsub Endo'
+subsubsubcategory: 'Subsubsub Endo'
 desc: 'Some words about Endocrine Model 1.'
 thumbnail: https://st3.depositphotos.com/2824873/16251/v/600/depositphotos_162517578-stock-illustration-endocrine-system-image.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

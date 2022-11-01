@@ -1,6 +1,9 @@
 ---
 title: 'Skeletal Model 1'
 category: 'Skeletal'
+subcategory: 'Sub Skeletal'
+subsubcategory: 'Subsub Skele'
+subsubsubcategory: 'Subsubsub Skele'
 desc: 'Some words about Skeletal Model 1.'
 thumbnail: https://static8.depositphotos.com/1229718/895/i/600/depositphotos_8957466-stock-photo-human-painful-joints.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

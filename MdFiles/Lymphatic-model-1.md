@@ -1,6 +1,9 @@
 ---
 title: 'Lymphatic Model 1'
 category: 'Lymphatic'
+subcategory: 'Sub Lymphatic'
+subsubcategory: 'Subsub Lym'
+subsubsubcategory: 'Subsubsub Lym'
 desc: 'Some words about Lymphatic Model 1.'
 thumbnail: https://st.depositphotos.com/1812149/2268/i/600/depositphotos_22681447-stock-photo-3d-art-illustration-of-lymphatic.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

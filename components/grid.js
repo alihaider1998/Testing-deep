@@ -27,7 +27,7 @@ export function DatasetGrid({ filesData }) {
         }
         return false;
     });
-    //FInish Filtering out records and avoiding one category to appear more time   
+    //Finish Filtering out records and avoiding one category to appear more time   
     const { value, setValue } = useContext(SearchContext)
     return (
         <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">

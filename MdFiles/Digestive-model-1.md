@@ -1,6 +1,9 @@
 ---
 title: 'Digestive Model 1'
 category: 'Digestive'
+subcategory: 'Sub Digestive'
+subsubcategory: 'Subsub Dig'
+subsubsubcategory: 'Subsubsub Dig'
 desc: 'Some description of Digestive Model 1.'
 thumbnail: https://st.depositphotos.com/1265046/2653/i/600/depositphotos_26539193-stock-photo-stomach-and-intestine-male-anatomy.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062

@@ -1,6 +1,9 @@
 ---
 title: 'CardioVascular Model 4'
 category: 'CardioVascular'
+subcategory: 'Sub CardioVascular2'
+subsubcategory: 'Subsub CardioVascular2'
+# subsubsubcategory: 'Subsubsub CardioVascular'
 desc: 'Some description of CardioVascular Model 4.'
 thumbnail: https://static8.depositphotos.com/1229718/1035/i/600/depositphotos_10351537-stock-photo-human-heart-blood-system.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
