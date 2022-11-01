@@ -12,10 +12,16 @@ import SearchAndFilter from '../../components/search'
 
 const searchTitle = (item, toBeChecked) => {
     return (
-        searchByTitle(item.frontmatter.title, toBeChecked))
+        item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
+        searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) : 
+        searchByTitle(item.frontmatter.title, toBeChecked)
+    )
 }
 const searchByTitle = (title, toBeChecked) => {
     return title.toLowerCase().includes(toBeChecked)
+}
+const searchBySubSubCatergory = (subsubcategory, toBeChecked) => {
+    return subsubcategory.toLowerCase().includes(toBeChecked)
 }
 
 

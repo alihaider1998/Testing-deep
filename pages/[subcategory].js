@@ -12,12 +12,17 @@ import SearchAndFilter from '../components/search'
 
 const searchTitle = (item, toBeChecked) => {
     return (
-        searchByTitle(item.frontmatter.title, toBeChecked))
+        item.frontmatter.subcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
+        searchBySubCatergory(item.frontmatter.subcategory, toBeChecked) : 
+        searchByTitle(item.frontmatter.title, toBeChecked)
+    )
 }
 const searchByTitle = (title, toBeChecked) => {
     return title.toLowerCase().includes(toBeChecked)
 }
-
+const searchBySubCatergory = (subcategory, toBeChecked) => {
+    return subcategory.toLowerCase().includes(toBeChecked)
+}
 
 
 export async function getStaticPaths() {
@@ -67,7 +72,6 @@ export async function getStaticProps({ params: { subcategory } }) {
 
 export default function CategoryPage({ filesData, subcategory }) {
     const [value, setValue] = useState('');
-    console.log(value)
     const router = useRouter();
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
@@ -130,22 +134,22 @@ export default function CategoryPage({ filesData, subcategory }) {
                         }
                     })}
             </div>
-             {/* Start Conditional Rendering of models heading in Subcategories */}
-             {filesData.filter(item => item.frontmatter.show == true)
+            {/* Start Conditional Rendering of models heading in Subcategories */}
+            {filesData.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.category == subcategory)
                 .filter(item => searchTitle(item, value)).map(props => {
                     if (!props.frontmatter.subcategory) {
                         subcategoryModelsExists = true
                     }
                 })}
-            {subcategoryModelsExists ? 
-             <div className="text-center">
-                <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
-                    Models of {useRouter().query.subcategory}
-                </h1>
-            </div>: false}
+            {subcategoryModelsExists ?
+                <div className="text-center">
+                    <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
+                        Models of {useRouter().query.subcategory}
+                    </h1>
+                </div> : false}
             {/* Ending Conditional Rendering of models heading in Subcategories */}
-           
+
             <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
                 {filesData.filter(item => item.frontmatter.show == true)
                     .filter(props => props.frontmatter.category == subcategory)
