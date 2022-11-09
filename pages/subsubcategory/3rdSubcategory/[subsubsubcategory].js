@@ -5,9 +5,13 @@ import matter from 'gray-matter'
 import Card from '../../../components/card'
 import ModelCard from '../../../components/modelCard'
 import { useRouter } from 'next/router';
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { SearchContext } from '../../../components/context/search'
 import SearchAndFilter from '../../../components/search'
+import { useDispatch, useSelector } from "react-redux";
+import { updateThird  } from "../../../slices/third";
+import { Subcategory, Subsubcategory, BacktoModels } from "../../../slices/sidebarStatus";
+
 
 const searchTitle = (item, toBeChecked) => {
     return (
@@ -44,6 +48,8 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params: { subsubsubcategory } }) {
 
+
+
     const files = fs.readdirSync('MdFiles')
     const filesData = files.map(fileName => {
         const slug = fileName.replace('.md', '')
@@ -65,10 +71,29 @@ export async function getStaticProps({ params: { subsubsubcategory } }) {
     }
 }
 
-
 export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) {
+    const dispatch = useDispatch();
+    var third = useSelector((state) => state.thirdStatus.value);
+
+  var menuItems = useSelector((state) => state.status.value);
+  useEffect(() => {
+    if(third){
+        dispatch(updateThird(false))
+        if (typeof window !== "undefined") {
+          for (let i = 0; i < menuItems.length; i++) {
+            if (menuItems[i].label === "Back To Models") {
+              dispatch(BacktoModels())
+            }
+        }
+    
+        } 
+    }
+
+  })
+
     const [value, setValue] = useState('');
     const router = useRouter();
+    console.log(router.pathname)
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
     const unique = filesData.filter(item => item.frontmatter.show == true).filter(element => {
@@ -83,8 +108,10 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
     let subsubsubcategoryExists = false;
     let subsubsubcategoryModelsExists = false;
     return (
+     
         <SearchContext.Provider value={{ value, setValue }}>
             <div>
+    
                 {/* <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.subsubsubcategory}</h1> */}
             </div>
             <div className="mb-12  text-center">
