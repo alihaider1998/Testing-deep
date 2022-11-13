@@ -10,7 +10,7 @@ import { SearchContext } from '../../../components/context/search'
 import SearchAndFilter from '../../../components/search'
 import { useDispatch, useSelector } from "react-redux";
 import { updateThird  } from "../../../slices/third";
-import { Subcategory, Subsubcategory, BacktoModels } from "../../../slices/sidebarStatus";
+import { Subcategory, Subsubcategory, BacktoModels, levelThreeName } from "../../../slices/sidebarStatus";
 
 
 const searchTitle = (item, toBeChecked) => {
@@ -77,17 +77,18 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
 
   var menuItems = useSelector((state) => state.status.value);
   useEffect(() => {
-    if(third){
+    dispatch(levelThreeName(subsubsubcategory))
+    // if(third){
         dispatch(updateThird(false))
         if (typeof window !== "undefined") {
-          for (let i = 0; i < menuItems.length; i++) {
-            if (menuItems[i].label === "Back To Models") {
+        //   for (let i = 0; i < menuItems.length; i++) {
+        //     if (menuItems[i].label === "Back To Models") {
               dispatch(BacktoModels())
-            }
-        }
+        //     }
+        // }
     
         } 
-    }
+    // }
 
   })
 

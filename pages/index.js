@@ -4,6 +4,11 @@ import matter from 'gray-matter'
 import { DatasetGrid } from '../components/grid'
 import SearchAndFilter from '../components/search'
 import { SearchContext } from '../components/context/search'
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react'
+import { updateThird  } from "../slices/third";
+
+import { clearLinks } from "../slices/sidebarStatus";
 
 export async function getStaticProps() {
     const files = fs.readdirSync('MdFiles')
@@ -26,6 +31,12 @@ export async function getStaticProps() {
 }
 
 export default function Home({ filesData }) {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+dispatch(clearLinks())
+    })
+
     const [value, setValue] = useState('');
     return (
         <SearchContext.Provider value={{ value, setValue }}>

@@ -15,10 +15,10 @@ export const userSlice = createSlice({
     name: "status",
     initialState: {
         value: [
-            { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-            { id: 2, label: "Subcategory", icon: ArticleIcon, link: "" },
-            { id: 3, label: "Subsub Categories", icon: UsersIcon, link: "" },
-            { id: 4, label: "Back To Models", icon: VideosIcon, link: "" }
+            { id: 1, label: "Main Categories", icon: HomeIcon, link: "/" },
+            { id: 2, label: "Level 1", icon: ArticleIcon, link: "" },
+            { id: 3, label: "Level 2", icon: UsersIcon, link: "" },
+            { id: 4, label: "Models", icon: VideosIcon, link: "" }
         ]
     },
     reducers: {
@@ -27,10 +27,10 @@ export const userSlice = createSlice({
         },
         Subcategory: (state, action) => {
 
-// console.log(action.payload)
+            // console.log(action.payload)
 
-state.value.map(item=>item.id===2 ? item.link=`/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
-console.log("first")
+            state.value.map(item => item.id === 2 ? item.link = `/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
+            console.log("first")
 
             // state.value[1].link=`/${(window.location.href.match(/([^\/]*)\/*$/)[1])}`
             // if (useRouter().pathname == "/[subcategory]") {
@@ -46,10 +46,10 @@ console.log("first")
         },
         Subsubcategory: (state, action) => {
 
-            state.value.map(item=>item.id===3 ? item.link=`/subsubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
+            state.value.map(item => item.id === 3 ? item.link = `/subsubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
             console.log("second")
-   
-        
+
+
             // state.value[2].link=`/subsubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}`
 
             // if (useRouter().pathname == "/subsubcategory/[subsubcategory]") {
@@ -65,9 +65,9 @@ console.log("first")
         },
         BacktoModels: (state, action) => {
 
-            state.value.map(item=>item.id===4 ? item.link=`/subsubcategory/3rdSubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
-console.log("third")
-            
+            state.value.map(item => item.id === 4 ? item.link = `/subsubcategory/3rdSubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
+            console.log("third")
+
             // state.value[3].link=`/subsubcategory/3rdSubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}`
 
             // if (useRouter().pathname == "/subsubcategory/3rdSubcategory/[subsubsubcategory]") {
@@ -81,12 +81,33 @@ console.log("third")
             //     }
             // }
         },
-
-
+        clearLinks: (state, action) => {
+            state.value[1].link = "";
+            state.value[2].link = "";
+            state.value[3].link = "";
+        },
+        clearSecondThirdLink: (state, action) => {
+            state.value[2].link = "";
+            state.value[3].link = "";
+        },
+        clearThirdLink: (state, action) => {
+            state.value[3].link = "";
+        },
+        levelOneName: (state, action) => {
+            state.value[1].label = action.payload;
+        },
+        levelTwoName: (state, action) => {
+            state.value[2].label = action.payload;
+        },
+        levelThreeName: (state, action) => {
+            state.value[3].label = action.payload;
+        }
     },
 });
 
-export const { Subcategory, getState, Subsubcategory, BacktoModels } = userSlice.actions;
+export const { Subcategory, getState, Subsubcategory, BacktoModels, 
+               clearLinks, clearSecondThirdLink, clearThirdLink, 
+               levelOneName, levelTwoName, levelThreeName} = userSlice.actions;
 export default userSlice.reducer;
 
 

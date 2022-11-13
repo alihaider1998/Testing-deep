@@ -10,7 +10,7 @@ import { SearchContext } from '../../components/context/search'
 import SearchAndFilter from '../../components/search'
 import { useDispatch, useSelector,  } from "react-redux";
 import { updateSecond  } from "../../slices/second";
-import { Subcategory, Subsubcategory, BacktoModels } from "../../slices/sidebarStatus";
+import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName } from "../../slices/sidebarStatus";
 
 const searchTitle = (item, toBeChecked) => {
     return (
@@ -80,21 +80,24 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
 
   var menuItems = useSelector((state) => state.status.value);
     useEffect(() => {
-    if(second){
+        dispatch(levelTwoName(subsubcategory))
+        // console.log(`${(window.location.href.match(/([^\/]*)\/*$/)[1])}`,"Category name")
+        dispatch(clearThirdLink())
+    // if(second){
         dispatch(updateSecond(false))
         // if (router.pathname === "/subsubcategory/[subsubcategory]") {
           if (typeof window !== "undefined") {
       
-            for (let i = 0; i < menuItems.length; i++) {
-              if (menuItems[i].label === "Subsub Categories") {
+            // for (let i = 0; i < menuItems.length; i++) {
+            //   if (menuItems[i].label === "Subsub Categories") {
                 dispatch(Subsubcategory())
       
-              }
-          }
+        //       }
+        //   }
       
           }   
          console.log(second,"second one")
-      }
+    //   }
     // },100)
     })
 

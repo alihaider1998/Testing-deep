@@ -177,7 +177,7 @@ console.log(menuItems)
         <div className="flex flex-col items-start mt-20">
             {/* // .filter(item=>subcategory ? item.label!=="Subcategory" : item) */}
 
-            {menuItems.map(({ icon: Icon, ...menu }) => {
+            {menuItems.filter(item=>item.link!="").map(({ icon: Icon, ...menu }) => {
               const classes = getNavItemClasses(menu);
               return (
                 <div key={menu.label} className={classes}>
@@ -203,7 +203,7 @@ console.log(menuItems)
         </div>
       </div>
 
-      <div className={`${getNavItemClasses({})} px-3 py-4`}>
+      {/* <div className={`${getNavItemClasses({})} px-3 py-4`}>
         <div style={{ width: "2.5rem" }}>
           <LogoutIcon />
         </div>
@@ -212,7 +212,7 @@ console.log(menuItems)
             Logout
           </span>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

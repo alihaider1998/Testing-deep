@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateFirst } from "../slices/first";
 import { updateSecond } from "../slices/second";
 import { updateThird } from "../slices/third";
-import { Subcategory, Subsubcategory, BacktoModels } from "../slices/sidebarStatus";
+import { Subcategory, Subsubcategory, BacktoModels, clearSecondThirdLink, levelOneName } from "../slices/sidebarStatus";
 
 
 const searchTitle = (item, toBeChecked) => {
@@ -80,23 +80,26 @@ export default function CategoryPage({ filesData, subcategory }) {
     const dispatch = useDispatch();
     var menuItems = useSelector((state) => state.status.value);
     useEffect(() => {
+        dispatch(levelOneName(subcategory))
+        // console.log(`${(window.location.href.match(/([^\/]*)\/*$/)[1])}`,"Category name")
+        dispatch(clearSecondThirdLink())
         dispatch(updateSecond(true), updateThird(true))
-        if (first) {
+        // if (first) {
             dispatch(updateFirst(false))
             //   if (router.pathname === "/[subcategory]") {
             if (typeof window !== "undefined") {
-                for (let i = 0; i < menuItems.length; i++) {
-                    if (menuItems[i].label === "Subcategory") {
+                // for (let i = 0; i < menuItems.length; i++) {
+                //     if (menuItems[i].label === "Subcategory") {
                         dispatch(Subcategory())
                         // menuItems[i].link = `/${(window.location.href.match(/([^\/]*)\/*$/)[1])}`
-                    }
-                }
+                //     }
+                // }
 
             }
             //   }
             console.log(first, "first one")
 
-        }
+        // }
     })
 
 

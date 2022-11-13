@@ -7,6 +7,7 @@ export const statusSlice = createSlice({
   reducers: {
     updateThird: (state, action) => {
       state.value =action.payload;
+      console.log("third")
     }
   },
 });
