@@ -1,3 +1,4 @@
+module.exports = nextConfig
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
@@ -7,4 +8,9 @@ const nextConfig = {
   assetPrefix: "/Testing-deep",
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+}
