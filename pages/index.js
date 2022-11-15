@@ -6,13 +6,10 @@ import SearchAndFilter from '../components/search'
 import { SearchContext } from '../components/context/search'
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react'
-import { updateThird  } from "../slices/third";
-
 import { clearLinks } from "../slices/sidebarStatus";
 
 export async function getStaticProps() {
     const files = fs.readdirSync('MdFiles')
-
     const filesData = files.map(fileName => {
         const slug = fileName.replace('.md', '')
         const filepath = `MdFiles/${fileName}`
@@ -34,7 +31,7 @@ export default function Home({ filesData }) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-dispatch(clearLinks())
+        dispatch(clearLinks())
     })
 
     const [value, setValue] = useState('');

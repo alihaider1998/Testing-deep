@@ -9,9 +9,6 @@ import { useContext, useState, useEffect } from 'react'
 import { SearchContext } from '../components/context/search'
 import SearchAndFilter from '../components/search'
 import { useDispatch, useSelector } from "react-redux";
-import { updateFirst } from "../slices/first";
-import { updateSecond } from "../slices/second";
-import { updateThird } from "../slices/third";
 import { Subcategory, Subsubcategory, BacktoModels, clearSecondThirdLink, levelOneName } from "../slices/sidebarStatus";
 
 
@@ -76,36 +73,16 @@ export async function getStaticProps({ params: { subcategory } }) {
 
 
 export default function CategoryPage({ filesData, subcategory }) {
-    var first = useSelector((state) => state.firstStatus.value);
     const dispatch = useDispatch();
-    var menuItems = useSelector((state) => state.status.value);
     useEffect(() => {
         dispatch(levelOneName(subcategory))
-        // console.log(`${(window.location.href.match(/([^\/]*)\/*$/)[1])}`,"Category name")
         dispatch(clearSecondThirdLink())
-        dispatch(updateSecond(true), updateThird(true))
-        // if (first) {
-            dispatch(updateFirst(false))
-            //   if (router.pathname === "/[subcategory]") {
-            if (typeof window !== "undefined") {
-                // for (let i = 0; i < menuItems.length; i++) {
-                //     if (menuItems[i].label === "Subcategory") {
-                        dispatch(Subcategory())
-                        // menuItems[i].link = `/${(window.location.href.match(/([^\/]*)\/*$/)[1])}`
-                //     }
-                // }
-
-            }
-            //   }
-            console.log(first, "first one")
-
-        // }
+        dispatch(Subcategory())
     })
 
 
     const [value, setValue] = useState('');
     const router = useRouter();
-    console.log(router.pathname)
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
     const unique = filesData.filter(item => item.frontmatter.show == true).filter(element => {

@@ -9,7 +9,6 @@ import { useContext, useState, useEffect } from 'react'
 import { SearchContext } from '../../components/context/search'
 import SearchAndFilter from '../../components/search'
 import { useDispatch, useSelector,  } from "react-redux";
-import { updateSecond  } from "../../slices/second";
 import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName } from "../../slices/sidebarStatus";
 
 const searchTitle = (item, toBeChecked) => {
@@ -76,35 +75,15 @@ export async function getStaticProps({ params: { subsubcategory } }) {
 
 export default function SubsubCategoryPage({ filesData, subsubcategory }) {
     const dispatch = useDispatch();
-    var second = useSelector((state) => state.secondStatus.value);
-
-  var menuItems = useSelector((state) => state.status.value);
     useEffect(() => {
         dispatch(levelTwoName(subsubcategory))
-        // console.log(`${(window.location.href.match(/([^\/]*)\/*$/)[1])}`,"Category name")
         dispatch(clearThirdLink())
-    // if(second){
-        dispatch(updateSecond(false))
-        // if (router.pathname === "/subsubcategory/[subsubcategory]") {
-          if (typeof window !== "undefined") {
-      
-            // for (let i = 0; i < menuItems.length; i++) {
-            //   if (menuItems[i].label === "Subsub Categories") {
-                dispatch(Subsubcategory())
-      
-        //       }
-        //   }
-      
-          }   
-         console.log(second,"second one")
-    //   }
-    // },100)
+        dispatch(Subsubcategory())
     })
 
 
     const [value, setValue] = useState('');
     const router = useRouter();
-    console.log(router.pathname)
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
     const unique = filesData.filter(item => item.frontmatter.show == true).filter(element => {

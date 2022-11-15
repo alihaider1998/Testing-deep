@@ -1,10 +1,6 @@
 import Card from './card'
 import { useContext, useEffect } from 'react'
 import { SearchContext } from './context/search'
-import { updateFirst  } from "../slices/first";
-import { updateSecond  } from "../slices/second";
-import { updateThird  } from "../slices/third";
-import { useDispatch, useSelector } from "react-redux";
 
 const searchCategory = (item, toBeChecked) => {
     return (
@@ -20,11 +16,6 @@ const searchByCategory = (category, toBeChecked) => {
 
 
 export function DatasetGrid({ filesData }) {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(updateFirst(true),updateSecond(true),updateThird(true))
-    })
     
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
