@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react'
 import { clearLinks } from "../slices/sidebarStatus";
 
+
 export async function getStaticProps() {
     const files = fs.readdirSync('MdFiles')
     const filesData = files.map(fileName => {

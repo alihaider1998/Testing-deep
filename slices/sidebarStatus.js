@@ -1,24 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 import classNames from "classnames";
 import {
-    ArticleIcon,
-    CollapsIcon,
+    singleArrow,
     HomeIcon,
-    LogoIcon,
-    LogoutIcon,
-    UsersIcon,
-    VideosIcon,
+    doubleArrow,
+    modelsIcon,
 } from "../components/icons";
+import chevronRight from "../components/icons/";
 import { useRouter } from "next/router";
+import { AiOutlineHome  } from 'react-icons/ai';
+import { BsChevronRight, BsChevronDoubleRight  } from 'react-icons/bs';
+import { IoPlaySkipBackSharp  } from 'react-icons/io5';
 
 export const userSlice = createSlice({
     name: "status",
+
     initialState: {
         value: [
-            { id: 1, label: "Main Categories", icon: HomeIcon, link: "/" },
-            { id: 2, label: "Level 1", icon: ArticleIcon, link: "" },
-            { id: 3, label: "Level 2", icon: UsersIcon, link: "" },
-            { id: 4, label: "Models", icon: VideosIcon, link: "" }
+            { id: 1, label: "Main Categories", icon: HomeIcon , link: "/" },
+            { id: 2, label: "Level 1", icon: singleArrow, link: "" },
+            { id: 3, label: "Level 2", icon: doubleArrow, link: "" },
+            { id: 4, label: "Models", icon: modelsIcon, link: "" }
         ]
     },
     reducers: {
@@ -37,7 +39,7 @@ export const userSlice = createSlice({
         BacktoModels: (state, action) => {
             state.value.map(item => item.id === 4 ? item.link = `/subsubcategory/3rdSubcategory/${(window.location.href.match(/([^\/]*)\/*$/)[1])}` : false)
         },
-        
+
         clearLinks: (state, action) => {
             state.value[1].link = "";
             state.value[2].link = "";
