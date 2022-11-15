@@ -3,13 +3,13 @@ import { useContext, useState } from 'react'
 import React, { useRef, useEffect } from "react";
 
 export default function SearchAndFilter() {
-    // const inputElement = useRef(null);
-    // useEffect(() => {
-    //     if (window.matchMedia("(min-width: 1024px)").matches) {
-    //         if (inputElement.current) {
-    //             inputElement.current.focus();
-    //         }          }
-    // }, []);
+    const inputElement = useRef(null);
+    useEffect(() => {
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+            if (inputElement.current) {
+                inputElement.current.focus();
+            }          }
+    }, []);
 
 
 
@@ -30,7 +30,7 @@ export default function SearchAndFilter() {
                     placeholder="Search ..."
                     onChange={val => setValue(val.target.value)}
                     value={value}
-                    // ref={inputElement}
+                    ref={inputElement}
                 />
             </div>
         </div>
