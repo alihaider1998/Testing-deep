@@ -5,10 +5,10 @@ import Sidebar from "./Sidebar";
 
 export default function Layout({ children }) {
     return (
-        
-        <div className="flex h-screen flex-col">
 
-            <header className="mb-8 py-2 justify-center bg-primary border border-orange-800 shadow-lg">
+        <div className="flex h-screen  flex-col">
+
+            <header style={{width: "125%"}} className="mb-8 py-2   bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
                     <Link href="/">
                         <h1 className="text-white cursor-pointer font-semibold text-4xl">DeepSynthBody</h1>
@@ -20,17 +20,17 @@ export default function Layout({ children }) {
             </header>
 
 
-            <div className=" flex flex-row justify-start">
-      <Sidebar />
-      <div className=" h-900 mx-auto max-w-7xl flex-1">
-                {children}
+            <div className=" flex flex-row  justify-start">
+                <Sidebar />
+                <div className="  container mx-auto max-w-7xl flex-1">
+                    {children}
+                </div>
             </div>
-    </div>
 
 
 
-           
-            <footer className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
+
+            <footer style={{width: "125%"}} className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
 
                 <a className='flex' href="https://github.com/simula/deepsynthbody">
                     <span className='mr-2'>Contribute By Uploading Your Model</span>
