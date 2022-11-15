@@ -6,11 +6,10 @@ const nextConfig = {
   trailingSlash: true,
   basePath: "/Testing-deep",
   assetPrefix: "/Testing-deep",
-}
-
-module.exports = {
   images: {
     loader: 'akamai',
     path: '',
   },
 }
+
+module.exports = nextConfig
