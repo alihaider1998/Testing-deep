@@ -119,7 +119,7 @@ export default function CategoryPage({ filesData, subcategory }) {
                     }
                 })}
             {subcategoryExists ? <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">
+                <h1 className=" font-semibold text-center mb-3 -mt-3 mx-1 text-4xl">
                     Subcategories of {useRouter().query.subcategory}
                 </h1>
             </div> : false}
