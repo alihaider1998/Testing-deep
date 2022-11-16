@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         if (window.matchMedia("(max-width: 430px)").matches && router.query.detail) {
             setSmallScreen(true)
         } else { setSmallScreen(false) }
-        
+
         if (window.matchMedia("(min-width: 430px)").matches && router.query.detail) {
             setBigScreen(true)
         } else { setBigScreen(false) }
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
     return (
 
         <div
-            style={isBigScreen ? { width: "101%" } : { width: "100%" }}
+            style={isBigScreen ? { width: "103%" } : { width: "100%" }}
             className="flex h-screen  flex-col">
 
             <header style={isSmallScreen ? { width: "125%" } : { width: "100%" }}
