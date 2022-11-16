@@ -22,7 +22,7 @@ export default function Layout({ children }) {
     return (
 
         <div
-            style={isBigScreen ? { width: "103%" } : { width: "100%" }}
+            style={isBigScreen ? { width: "108%" } : { width: "100%" }}
             className="flex h-screen  flex-col">
 
             <header style={isSmallScreen ? { width: "125%" } : { width: "100%" }}

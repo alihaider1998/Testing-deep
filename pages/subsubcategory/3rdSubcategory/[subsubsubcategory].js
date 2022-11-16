@@ -113,7 +113,7 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
                     }
                 })}
             {subsubsubcategoryExists ? <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3 mx-1 text-4xl">
+                <h1 className=" font-semibold text-center mb-3  text-4xl">
                     Models of {useRouter().query.subsubsubcategory}
                 </h1>
             </div> : false}
@@ -150,7 +150,7 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory }) 
                     }
                 })}
             {subsubsubcategoryModelsExists ? <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3 mt-3 mx-1 text-4xl">
+                <h1 className=" font-semibold text-center mb-3 mt-3 text-4xl">
                     Models of {useRouter().query.subsubsubcategory}
 
                 </h1>
