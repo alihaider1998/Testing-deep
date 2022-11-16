@@ -2,13 +2,31 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 import { useRouter } from 'next/router';
 import Sidebar from "./Sidebar";
+import React, { useState, useEffect, } from "react";
 
 export default function Layout({ children }) {
+    const [isSmallScreen, setSmallScreen] = useState(false);
+    const [isBigScreen, setBigScreen] = useState(false);
+
+    const router = useRouter();
+    useEffect(() => {
+        if (window.matchMedia("(max-width: 430px)").matches && router.query.detail) {
+            setSmallScreen(true)
+        } else { setSmallScreen(false) }
+        
+        if (window.matchMedia("(min-width: 430px)").matches && router.query.detail) {
+            setBigScreen(true)
+        } else { setBigScreen(false) }
+    }, [isSmallScreen, router.query.detail]);
+
     return (
 
-        <div className="flex h-screen  flex-col">
+        <div
+            style={isBigScreen ? { width: "101%" } : { width: "100%" }}
+            className="flex h-screen  flex-col">
 
-            <header style={{width: "125%"}} className="mb-8 py-2   bg-primary border border-orange-800 shadow-lg">
+            <header style={isSmallScreen ? { width: "125%" } : { width: "100%" }}
+                className="mb-8 py-2   bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
                     <Link href="/">
                         <h1 className="text-white cursor-pointer font-semibold text-4xl">DeepSynthBody</h1>
@@ -28,9 +46,9 @@ export default function Layout({ children }) {
             </div>
 
 
-
-
-            <footer style={{width: "125%"}} className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
+            <footer
+                style={isSmallScreen ? { width: "125%" } : { width: "100%" }}
+                className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
 
                 <a className='flex' href="https://github.com/simula/deepsynthbody">
                     <span className='mr-2'>Contribute By Uploading Your Model</span>
