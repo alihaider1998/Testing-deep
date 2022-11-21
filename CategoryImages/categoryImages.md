@@ -8,6 +8,6 @@ Muscular: /Testing-deep/imagesOfCategories/Muscular.jpeg
 Nervous: /Testing-deep/imagesOfCategories/Nervous.jpeg
 Reproductive: /Testing-deep/imagesOfCategories/Reproductive.jpeg
 Respiratory: /Testing-deep/imagesOfCategories/Respiratory.jpeg
-Skeletal: /deepsynthbody/imagesOfCategories/Skeletal.jpeg
+Skeletal: /Testing-deep/imagesOfCategories/Skeletal.jpeg
 Urinary: /Testing-deep/imagesOfCategories/Urinary.jpeg
 ---
