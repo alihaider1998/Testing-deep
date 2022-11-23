@@ -15,7 +15,6 @@ const searchByCategory = (category, toBeChecked) => {
 
 
 export function DatasetGrid({ filesData, images }) {
-
     //Start Filtering out records and avoiding one category to appear more time   
     const newCategoryArr = new Set();
     const unique = filesData.filter(item => item.frontmatter.show == true).filter(element => {
@@ -38,7 +37,6 @@ export function DatasetGrid({ filesData, images }) {
             }
         )
     }   
-
     return (
         <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
             {
