@@ -11,13 +11,13 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import Card from './carouselCards'
 
-var array = [{ category: 'Cardiovascular', thumbnail: '/deepsynthbody/imagesOfCategories/Cardiovascular.jpeg' },
-{ category: 'Endocrine', thumbnail: '/deepsynthbody/imagesOfCategories/Endocrine.jpeg' },
-{ category: 'Integumentary', thumbnail: '/deepsynthbody/imagesOfCategories/Integumentary.jpeg' },
-{ category: 'Lymphatic', thumbnail: '/deepsynthbody/imagesOfCategories/Lymphatic.jpeg' },
-{ category: 'Muscular', thumbnail: '/deepsynthbody/imagesOfCategories/Muscular.jpeg' },
-{ category: 'Nervous', thumbnail: '/deepsynthbody/imagesOfCategories/Nervous.jpeg' },
-{ category: 'Urinary', thumbnail: '/deepsynthbody/imagesOfCategories/Urinary.jpeg' }]
+var array = [{ category: 'Cardiovascular', thumbnail: '/Testing-deep/imagesOfCategories/Cardiovascular.jpeg' },
+{ category: 'Endocrine', thumbnail: '/Testing-deep/imagesOfCategories/Endocrine.jpeg' },
+{ category: 'Integumentary', thumbnail: '/Testing-deep/imagesOfCategories/Integumentary.jpeg' },
+{ category: 'Lymphatic', thumbnail: '/Testing-deep/imagesOfCategories/Lymphatic.jpeg' },
+{ category: 'Muscular', thumbnail: '/Testing-deep/imagesOfCategories/Muscular.jpeg' },
+{ category: 'Nervous', thumbnail: '/Testing-deep/imagesOfCategories/Nervous.jpeg' },
+{ category: 'Urinary', thumbnail: '/Testing-deep/imagesOfCategories/Urinary.jpeg' }]
 
 const Header = () => {
   return (
