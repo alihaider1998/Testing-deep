@@ -10,9 +10,11 @@
       @apply text-xl  font-semibold;
     }
   }  
+  .swiper-button-next { color: #07849f !important; }
+  .swiper-button-prev { color: #07849f !important; }
 
   .swiper-wrapper{
-    width: 300px !important;
+    width: 80px !important;
   } 
   
   @media screen and (min-width: 640px) {

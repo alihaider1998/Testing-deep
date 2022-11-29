@@ -25,9 +25,9 @@ export default function Layout({ children }) {
                 </div>
             </header> */}
 
-            <div className=" flex flex-row justify-start mt-2">
+            <div className="flex mt-2">
                 <Sidebar />
-                <div style={{ width: "60rem"}} className=" h-900 mx-auto flex-1 ">
+                <div style={{ width: "60rem"}} className="h-900 flex-1 ">
                     {children}
                 </div>
             </div>
