@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 export default function Layout({ children }) {
     const footer = useSelector((state) => state.myFooter.value);
-
+let abc=false;
     return (
         <div  className="flex h-screen flex-col">
             <Navbar  />
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
 
             <div className="flex mt-2">
                 <Sidebar />
-                <div style={{ width: "60rem"}} className="h-900 flex-1 ">
+                <div style={{ width: "15rem"}} className="h-900 flex-1 px-4">
                     {children}
                 </div>
             </div>
