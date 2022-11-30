@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     const footer = useSelector((state) => state.myFooter.value);
 
     return (
-        <div  className="flex h-screen flex-col">
+        <div className="flex h-screen flex-col sm:-mr-0 -mr-9">
             <Navbar  />
             <br />
 
