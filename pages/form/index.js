@@ -32,7 +32,7 @@ function index() {
         <div className='relative'>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfVPZNfPxVwDwRPBXP9jwgS7UrWu4v7oLyWXlrpkA-dh4rfTA/viewform?embedded=true"
-          width="100%"
+          width="110%"
           height="1000"
           frameBorder="0"
           marginHeight="0"
