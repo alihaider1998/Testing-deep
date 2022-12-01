@@ -9,10 +9,10 @@ export default function Layout({ children }) {
     const footer = useSelector((state) => state.myFooter.value);
 
     return (
-        <div className="flex h-screen flex-col sm:-mr-0 -mr-9">
+        <div className="flex h-screen flex-col ">
             <Navbar  />
             <br />
-
+            {/* sm:-mr-0 -mr-9 */}
 {/*             
             <header className="mb-8 py-2 justify-center bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
