@@ -32,12 +32,12 @@ function index() {
         <div className='relative overflow-scroll'>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfVPZNfPxVwDwRPBXP9jwgS7UrWu4v7oLyWXlrpkA-dh4rfTA/viewform?embedded=true"
-          width="110%"
+          width="88vw"
           height="100vh"
           frameBorder="0"
           marginHeight="0"
           marginWidth="0"
-          className='relative overflow-scroll form-iframe'>
+          className='relative overflow-scroll p-3 form-iframe'>
           Loading…
         </iframe>
       </div>

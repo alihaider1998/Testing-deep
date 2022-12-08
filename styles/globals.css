@@ -5,6 +5,7 @@
 
 .form-iframe {
   height: 100vh;
+  width: 88vw;
 }
 @layer base {
     h1 {
