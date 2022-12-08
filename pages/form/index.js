@@ -29,11 +29,11 @@ function index() {
 //   </div>
 // </section>
 //     </div>
-        <div className='relative'>
+        <div className='relative overflow-scroll'>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfVPZNfPxVwDwRPBXP9jwgS7UrWu4v7oLyWXlrpkA-dh4rfTA/viewform?embedded=true"
-          width="110%"
-          height="1000"
+          width="100%"
+          height="1150"
           frameBorder="0"
           marginHeight="0"
           marginWidth="0"

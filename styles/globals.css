@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.F9yp7e.ikZYwf.LgNcQe > span {
+  white-space: normal !important;
+}
+
 @layer base {
     h1 {
       @apply text-2xl font-semibold;
