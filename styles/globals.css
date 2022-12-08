@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.F9yp7e.ikZYwf.LgNcQe > span {
-  white-space: normal !important;
-}
 
+.form-iframe {
+  height: 100vh;
+}
 @layer base {
     h1 {
       @apply text-2xl font-semibold;
