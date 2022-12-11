@@ -13,16 +13,16 @@ import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName
 
 const searchTitle = (item, toBeChecked) => {
     return (
-        item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
-            searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) :
-            searchByTitle(item.frontmatter.title, toBeChecked)
+        item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked.toLowerCase()) ||
+            searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked.toLowerCase()) :
+            searchByTitle(item.frontmatter.title, toBeChecked.toLowerCase())
     )
 }
 const searchByTitle = (item, toBeChecked) => {
-    return item.toLowerCase().includes(toBeChecked)
+    return item.toLowerCase().includes(toBeChecked.toLowerCase())
 }
 const searchBySubSubCatergory = (item, toBeChecked) => {
-    return item.toLowerCase().includes(toBeChecked)
+    return item.toLowerCase().includes(toBeChecked.toLowerCase())
 }
 
 
