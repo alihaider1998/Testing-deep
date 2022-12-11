@@ -31,6 +31,7 @@ export default function SearchAndFilter() {
                     onChange={val => setValue(val.target.value)}
                     value={value}
                     ref={inputElement}
+                    onKeyUp={val => setValue(val.target.value)}
                 />
             </div>
         </div>
