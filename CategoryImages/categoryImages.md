@@ -1,13 +1,13 @@
 ---
-Cardiovascular: /Testing-deep/imagesOfCategories/cardiovascular_sm.svg
-Digestive: /Testing-deep/imagesOfCategories/Digestive.svg
-Endocrine: /Testing-deep/imagesOfCategories/endocrine system.svg
-Integumentary: /Testing-deep/imagesOfCategories/Integumentary.svg
-Lymphatic: /Testing-deep/imagesOfCategories/lymphatic.svg
-Muscular: /Testing-deep/imagesOfCategories/muscular.svg
-Nervous: /Testing-deep/imagesOfCategories/nervous system.svg
-Reproductive: /Testing-deep/imagesOfCategories/Reproductive.svg
-Respiratory: /Testing-deep/imagesOfCategories/respiratory small.svg
-Skeletal: /Testing-deep/imagesOfCategories/skeletal.svg
-Urinary: /Testing-deep/imagesOfCategories/urinary_sm.svg
+Cardiovascular: /Testing-deep/imagesOfCategories/icons with circle/circle cardiovascular.svg
+Digestive: /Testing-deep/imagesOfCategories/icons with circle/circle digestive.svg
+Endocrine: /Testing-deep/imagesOfCategories/icons with circle/circle endocrine.svg
+Integumentary: /Testing-deep/imagesOfCategories/icons with circle/circle integumentary.svg
+Lymphatic: /Testing-deep/imagesOfCategories/icons with circle/circle lymphatic.svg
+Muscular: /Testing-deep/imagesOfCategories/icons with circle/circle muscular.svg
+Nervous: /Testing-deep/imagesOfCategories/icons with circle/circle nervous.svg
+Reproductive: /Testing-deep/imagesOfCategories/icons with circle/circle reproductive.svg
+Respiratory: /Testing-deep/imagesOfCategories/icons with circle/circle respiratory.svg
+Skeletal: /Testing-deep/imagesOfCategories/icons with circle/circle skeletal.svg
+Urinary: /Testing-deep/imagesOfCategories/icons with circle/circle urinary.svg
 ---
