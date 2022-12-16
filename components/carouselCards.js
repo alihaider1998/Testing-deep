@@ -17,7 +17,7 @@ export default function Card(props) {
                 key={props.link}
                 className="m-6 text-center flex"
             >
-                <div className='sm:m-auto mt-8'>
+                <div className='sm:m-auto sm:ml-5 mt-8'>
                     <h2 >{props.description}</h2>
                     <button onClick={() => router.push(`${props.link}`)} className="mt-14 mb-8 text-2xl p-3  text-center text-white rounded-lg bg-primary sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                         {props.buttonName}
