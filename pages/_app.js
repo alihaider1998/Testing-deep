@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
             <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
                 <title>DeepSynthBody</title>
             </Head>
-            <Script
+            <Script  async
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-8PHFVGCB86`}
       />
