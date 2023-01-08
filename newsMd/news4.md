@@ -7,5 +7,6 @@ date: April 28, 2022
 tag1: machine learning
 tag2: AI
 author: Unknown
+category: Machine learning
 show: true
 ---

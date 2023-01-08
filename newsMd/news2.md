@@ -7,5 +7,6 @@ date: November 17, 2022
 tag1: data science
 tag2: AI
 author: Allison whitten
+category: Data Science
 show: true
 ---

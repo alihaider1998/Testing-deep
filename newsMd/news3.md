@@ -7,5 +7,6 @@ date: October 17, 2015
 tag1: data science
 tag2: AI
 author: Sergey Toporov
+category: Artificial Intelligence
 show: true
 ---

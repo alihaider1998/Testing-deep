@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { clearLinks } from "../slices/sidebarStatus";
+import { NewsPage } from "../slices/sidebarStatus";
 import { Subcategory, Subsubcategory, BacktoModels } from "../slices/sidebarStatus";
 import whiteLogo from "./icons/whiteLogo.png";
 import Image from 'next/image'
@@ -10,26 +12,32 @@ import {
   CollapsIcon,
 } from "./icons";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const dispatch = useDispatch();
   const menuItems = useSelector((state) => state.status.value);
   const [toggleCollapse, setToggleCollapse] = useState(true);
   const [isCollapsible, setIsCollapsible] = useState(true);
   const [isSmallScreen, setSmallScreen] = useState(false);
   const router = useRouter();
+
+
   useEffect(() => {
     if (window.matchMedia("(max-width: 430px)").matches) {
-      setSmallScreen(false);setToggleCollapse(true)
+      setSmallScreen(false); setToggleCollapse(true)
     } else { setSmallScreen(true); setToggleCollapse(false) }
-  }, [isSmallScreen]);
+    if (router.pathname == "/about" || router.pathname == "/form") {
+      dispatch(clearLinks())
+    }
+  }, [dispatch, isSmallScreen, router.pathname]);
   //on window resize
-  function handleResize(){
+  function handleResize() {
     if (window.matchMedia("(max-width: 430px)").matches) {
-      setSmallScreen(false);setToggleCollapse(true) 
-    } else { setSmallScreen(true); setToggleCollapse(false) } 
+      setSmallScreen(false); setToggleCollapse(true)
+    } else { setSmallScreen(true); setToggleCollapse(false) }
   }
-  if (typeof window !== "undefined"){
-  window.addEventListener('resize', handleResize)}
+  if (typeof window !== "undefined") {
+    window.addEventListener('resize', handleResize)
+  }
 
 
   const wrapperClasses = classNames(
@@ -86,7 +94,7 @@ const Sidebar = () => {
             return (
               <div key={menu.label} >
                 <Link href={menu.link}>
-                  <a className="flex py-6  px-3 items-center w-full h-full">
+                  <a className={"flex py-6  px-3 items-center w-full h-full"}  onClick={menu.onClick}>
                     <div style={{ width: "2.5rem" }}>
                       <Icon />
                     </div>
