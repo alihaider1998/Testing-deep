@@ -3,8 +3,8 @@ import React from 'react'
 function index() {
   return (
     <div>
-<section className="bg-white dark:bg-gray-900">
-  <div className="pb-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+<section className="bg-white -mt-8 dark:bg-gray-900">
+  <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Help Us With Feedback</h2>
       <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a sugesstion? Want to contribute towards models? Want to Report a malfunction? Let us know.</p>
       <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVPZNfPxVwDwRPBXP9jwgS7UrWu4v7oLyWXlrpkA-dh4rfTA/formResponse" method="POST"  className="space-y-8">
